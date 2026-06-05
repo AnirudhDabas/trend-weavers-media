@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { CTABanner } from "@/components/sections/CTABanner";
@@ -42,14 +43,14 @@ const values = [
 
 const founders = [
   {
-    initials: "NN",
+    image: "/naman.jpeg",
     name: "Naman Veer Nakra",
     title: "Co-Founder",
     bio: "Naman shapes the strategy behind Trend Weavers. He connects market insight, brand positioning, and performance thinking to help clients turn strong creative into stronger business results.",
     linkedin: "https://linkedin.com/in/namanvnakra",
   },
   {
-    initials: "AD",
+    image: "/aniheadshot.jpeg",
     name: "Anirudh Dabas",
     title: "Co-Founder",
     bio: "Anirudh sits at the intersection of engineering, growth, and analytics. He builds the tools and systems that help Trend Weavers move faster, measure better, and deliver real business outcomes.",
@@ -175,14 +176,14 @@ export default function AboutPage() {
             {founders.map((f, i) => (
               <FadeIn key={i} delay={i * 0.12}>
                 <div className="bg-background rounded-2xl p-8 border border-border flex flex-col gap-5">
-                  <div
-                    className="w-16 h-16 rounded-full flex items-center justify-center text-white font-bold text-lg"
-                    style={{
-                      background: "linear-gradient(135deg, #00C4CC 0%, #00D4DC 100%)",
-                      fontFamily: "var(--font-jakarta)",
-                    }}
-                  >
-                    {f.initials}
+                  <div className="w-20 h-20 rounded-full overflow-hidden shrink-0">
+                    <Image
+                      src={f.image}
+                      alt={f.name}
+                      width={80}
+                      height={80}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div>
                     <h3
