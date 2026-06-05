@@ -1,0 +1,37 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="400" rx="56" fill="#FFD166"/>
+
+  <!-- T – top bar -->
+  <rect x="25" y="100" width="150" height="48" rx="10" fill="#00C4CC"/>
+  <!-- T – stem -->
+  <rect x="76" y="148" width="46" height="168" rx="10" fill="#00C4CC"/>
+
+  <!-- W -->
+  <path
+    d="M198 100 L234 288 L284 158 L334 288 L366 100"
+    stroke="#00C4CC"
+    stroke-width="44"
+    stroke-linejoin="round"
+    stroke-linecap="round"
+    fill="none"
+  />
+
+  <!-- Arrow – shaft -->
+  <path
+    d="M272 320 L380 68"
+    stroke="#00C4CC"
+    stroke-width="40"
+    stroke-linecap="round"
+    fill="none"
+  />
+  <!-- Arrow – head (corner) -->
+  <path
+    d="M352 48 L388 48 L388 84"
+    stroke="#00C4CC"
+    stroke-width="40"
+    stroke-linejoin="round"
+    stroke-linecap="round"
+    fill="none"
+  />
+</svg>

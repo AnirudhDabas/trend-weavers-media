@@ -4,6 +4,7 @@ import "./globals.css";
 import { Providers } from "./providers";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { LoadingScreen } from "@/components/layout/LoadingScreen";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -53,6 +54,7 @@ export default function RootLayout({
     >
       <body className="min-h-screen flex flex-col antialiased">
         <Providers>
+          <LoadingScreen />
           <Navbar />
           <main className="flex-1">{children}</main>
           <Footer />
