@@ -46,6 +46,7 @@ const founders = [
     image: "/naman.jpeg",
     name: "Naman Veer Nakra",
     title: "Co-Founder",
+    edu: "Finance, Economics & Data Science · Rotman Commerce, University of Toronto",
     bio: "Naman shapes the strategy behind Trend Weavers. He connects market insight, brand positioning, and performance thinking to help clients turn strong creative into stronger business results.",
     linkedin: "https://linkedin.com/in/namanvnakra",
   },
@@ -53,6 +54,7 @@ const founders = [
     image: "/aniheadshot.jpeg",
     name: "Anirudh Dabas",
     title: "Co-Founder",
+    edu: "Computer Science · University of Waterloo",
     bio: "Anirudh sits at the intersection of engineering, growth, and analytics. He builds the tools and systems that help Trend Weavers move faster, measure better, and deliver real business outcomes.",
     linkedin: "https://linkedin.com/in/anirudh-dabas-ab3998229",
   },
@@ -79,7 +81,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our Story — 2-col */}
+      {/* Our Story - 2-col */}
       <section className="py-16 lg:py-24 bg-surface">
         <div className="max-w-[1280px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <FadeIn>
@@ -193,6 +195,7 @@ export default function AboutPage() {
                       {f.name}
                     </h3>
                     <p className="text-sm text-teal font-medium mt-0.5">{f.title}</p>
+                    <p className="text-xs text-muted-foreground mt-1 leading-snug">{f.edu}</p>
                   </div>
                   <p className="text-sm text-muted-foreground leading-[1.7]">{f.bio}</p>
                   <a
