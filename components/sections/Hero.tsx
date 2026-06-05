@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useAppReady } from "@/context/appReady";
 
 function WeavingSVG() {
   return (
@@ -140,7 +141,7 @@ function WeavingSVG() {
         />
       ))}
 
-      {/* Accent shape */}
+      {/* Accent shapes */}
       <motion.rect
         x="30"
         y="30"
@@ -186,6 +187,8 @@ const marqueeItems = [
 ];
 
 export function Hero() {
+  const { appReady } = useAppReady();
+
   return (
     <section className="min-h-[calc(100vh-4rem)] flex flex-col">
       {/* Main hero */}
@@ -193,22 +196,39 @@ export function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-12 lg:gap-16 w-full">
           {/* Left */}
           <div className="flex flex-col justify-center gap-6">
+            {/* Yellow eyebrow */}
             <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0 }}
+              initial={{ opacity: 0 }}
+              animate={appReady ? { opacity: 1 } : { opacity: 0 }}
+              transition={{ duration: 0.6, delay: 0 }}
+              className="flex items-center gap-3"
             >
+              <motion.span
+                initial={{ scaleX: 0 }}
+                animate={appReady ? { scaleX: 1 } : { scaleX: 0 }}
+                transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+                className="inline-block h-px w-8 origin-left"
+                style={{ background: "var(--yellow)" }}
+              />
               <span
-                className="inline-flex items-center gap-1.5 text-xs font-bold tracking-[0.15em] uppercase px-3 py-1.5 rounded-full"
-                style={{ background: "var(--yellow)", color: "#0D1B2A" }}
+                className="text-[11px] font-semibold tracking-[0.22em] uppercase"
+                style={{ color: "var(--yellow)" }}
               >
-                <span>✦</span> Digital Marketing Agency
+                Digital Marketing Agency
               </span>
+              <motion.span
+                initial={{ scaleX: 0 }}
+                animate={appReady ? { scaleX: 1 } : { scaleX: 0 }}
+                transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
+                className="inline-block h-px w-8 origin-left"
+                style={{ background: "var(--yellow)" }}
+              />
             </motion.div>
+
             <div className="flex flex-col gap-1">
               <motion.p
                 initial={{ y: 30, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
+                animate={appReady ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
                 transition={{ duration: 0.6, delay: 0.1, ease: lineEase }}
                 className="text-[56px] lg:text-[68px] xl:text-[76px] font-light leading-[1.05] tracking-tight text-foreground"
                 style={{ fontFamily: "var(--font-jakarta)" }}
@@ -217,7 +237,7 @@ export function Hero() {
               </motion.p>
               <motion.p
                 initial={{ y: 30, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
+                animate={appReady ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
                 transition={{ duration: 0.6, delay: 0.25, ease: lineEase }}
                 className="text-[56px] lg:text-[68px] xl:text-[76px] font-extrabold leading-[1.05] tracking-tight"
                 style={{
@@ -232,7 +252,7 @@ export function Hero() {
               </motion.p>
               <motion.p
                 initial={{ y: 30, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
+                animate={appReady ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
                 transition={{ duration: 0.6, delay: 0.4, ease: lineEase }}
                 className="text-[56px] lg:text-[68px] xl:text-[76px] font-light leading-[1.05] tracking-tight text-foreground"
                 style={{ fontFamily: "var(--font-jakarta)" }}
@@ -243,7 +263,7 @@ export function Hero() {
 
             <motion.p
               initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
+              animate={appReady ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
               transition={{ duration: 0.5, delay: 0.6 }}
               className="text-base text-muted-foreground leading-[1.7] max-w-[500px]"
             >
@@ -252,7 +272,7 @@ export function Hero() {
 
             <motion.div
               initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
+              animate={appReady ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
               transition={{ duration: 0.5, delay: 0.75 }}
               className="flex flex-wrap gap-3"
             >
@@ -273,14 +293,14 @@ export function Hero() {
             </motion.div>
           </div>
 
-          {/* Right — SVG illustration */}
+          {/* Right — SVG illustration (only mount after ready so paths draw fresh) */}
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            animate={appReady ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             className="hidden lg:flex items-center justify-center"
           >
-            <WeavingSVG />
+            {appReady && <WeavingSVG />}
           </motion.div>
         </div>
       </div>
