@@ -190,7 +190,7 @@ export function Hero() {
   const { appReady } = useAppReady();
 
   return (
-    <section className="lg:min-h-[calc(100vh-4rem)] flex flex-col">
+    <section className="min-h-[calc(100svh-4rem)] flex flex-col">
       {/* Main hero */}
       <div className="flex-1 max-w-[1280px] mx-auto px-6 flex items-start lg:items-center w-full pt-12 pb-14 lg:py-0">
         <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-12 lg:gap-16 w-full">
