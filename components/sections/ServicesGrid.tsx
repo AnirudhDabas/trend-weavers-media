@@ -111,7 +111,6 @@ function ServiceCard({ service, index }: ServiceCardProps) {
         Learn more
         <span className="transition-all">→</span>
       </Link>
-      {/* Left accent border */}
       <div className="absolute left-0 top-4 bottom-4 w-[3px] rounded-full bg-teal opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
     </motion.div>
   );
@@ -124,7 +123,7 @@ export function ServicesGrid() {
   return (
     <section className="py-24 lg:py-32 bg-background">
       <div className="max-w-[1280px] mx-auto px-6">
-        <div ref={ref} className="mb-14">
+        <div ref={ref} className="mb-10 md:mb-14">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -143,9 +142,60 @@ export function ServicesGrid() {
           </motion.div>
         </div>
 
-        {/* Asymmetric grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
-          {/* Row 1: large (2 cols) + small + small */}
+        {/* Mobile: horizontal scroll carousel */}
+        <motion.div
+          className="md:hidden -mx-6"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.5 }}
+        >
+          <div
+            className="flex gap-4 overflow-x-auto px-6 pb-4 snap-x snap-mandatory"
+            style={{ scrollbarWidth: "none" }}
+          >
+            {services.map((service, i) => (
+              <div
+                key={i}
+                className="flex-none w-[72vw] snap-start bg-surface rounded-2xl p-5 border border-border flex flex-col gap-4"
+              >
+                <div className="flex items-start justify-between">
+                  <div className="w-11 h-11 rounded-xl bg-teal/10 flex items-center justify-center shrink-0">
+                    {service.icon}
+                  </div>
+                  <span
+                    className="text-[11px] font-bold tabular-nums"
+                    style={{ fontFamily: "var(--font-jetbrains)", color: "rgba(0,196,204,0.4)" }}
+                  >
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                </div>
+                <div className="flex flex-col gap-1.5 flex-1">
+                  <h3
+                    className="text-base font-semibold text-foreground leading-snug"
+                    style={{ fontFamily: "var(--font-jakarta)" }}
+                  >
+                    {service.name}
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{service.desc}</p>
+                </div>
+                <Link
+                  href="/services"
+                  className="text-sm font-medium text-teal inline-flex items-center gap-1 mt-auto"
+                >
+                  Learn more →
+                </Link>
+              </div>
+            ))}
+          </div>
+          {/* Scroll hint */}
+          <p className="text-[11px] text-muted-foreground/50 text-right px-6 -mt-1">
+            swipe for more
+          </p>
+        </motion.div>
+
+        {/* Desktop: asymmetric bento grid */}
+        <div className="hidden md:grid grid-cols-4 gap-5">
           <div className="md:col-span-2">
             <ServiceCard service={services[0]} index={0} />
           </div>
@@ -155,7 +205,6 @@ export function ServicesGrid() {
           <div>
             <ServiceCard service={services[2]} index={2} />
           </div>
-          {/* Row 2: small + small + large (2 cols) */}
           <div>
             <ServiceCard service={services[3]} index={3} />
           </div>
