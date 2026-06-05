@@ -43,7 +43,7 @@ const values = [
 const founders = [
   {
     initials: "NN",
-    name: "Naman Nakra",
+    name: "Naman Veer Nakra",
     title: "Co-Founder",
     bio: "Naman shapes the strategy behind Trend Weavers. He connects market insight, brand positioning, and performance thinking to help clients turn strong creative into stronger business results.",
     linkedin: "https://linkedin.com/in/namanvnakra",
