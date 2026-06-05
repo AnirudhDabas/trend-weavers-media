@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { useAppReady } from "@/context/appReady";
 
 export function LoadingScreen() {
@@ -20,30 +21,33 @@ export function LoadingScreen() {
     <AnimatePresence>
       {visible && (
         <motion.div
-          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#070D16]"
+          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#0D1B2A]"
           exit={{ opacity: 0 }}
           transition={{ duration: 0.65, ease: "easeInOut" }}
         >
-          <div className="flex flex-col items-center gap-6">
-            {/* TW — slides up from below the overflow clip */}
-            <div className="overflow-hidden pb-2">
-              <motion.span
-                initial={{ y: "105%" }}
-                animate={{ y: "0%" }}
-                transition={{ duration: 0.75, ease: [0.76, 0, 0.24, 1] }}
-                className="block text-[108px] sm:text-[128px] font-extrabold leading-none tracking-[-0.04em]"
-                style={{ color: "#00C4CC", fontFamily: "var(--font-jakarta)" }}
-              >
-                TW
-              </motion.span>
-            </div>
+          <div className="flex flex-col items-center gap-7">
+            {/* Logo mark */}
+            <motion.div
+              initial={{ scale: 0.78, opacity: 0, y: 12 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              transition={{ duration: 0.65, ease: [0.34, 1.56, 0.64, 1] }}
+            >
+              <Image
+                src="/Digital Marketing Agency Modern Logo.png"
+                width={176}
+                height={176}
+                alt="Trend Weavers Media"
+                className="rounded-[32px]"
+                priority
+              />
+            </motion.div>
 
             {/* Yellow rule */}
             <motion.div
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
-              transition={{ duration: 0.5, delay: 0.6, ease: "easeOut" }}
-              className="h-px w-12 origin-center"
+              transition={{ duration: 0.45, delay: 0.5, ease: "easeOut" }}
+              className="h-px w-10 origin-center"
               style={{ background: "#FFD166" }}
             />
 
@@ -51,9 +55,9 @@ export function LoadingScreen() {
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.8 }}
+              transition={{ duration: 0.5, delay: 0.7 }}
               className="text-[10px] font-semibold tracking-[0.42em] uppercase"
-              style={{ color: "rgba(255,255,255,0.25)", fontFamily: "var(--font-jakarta)" }}
+              style={{ color: "rgba(255,255,255,0.3)", fontFamily: "var(--font-jakarta)" }}
             >
               Trend Weavers Media
             </motion.p>
