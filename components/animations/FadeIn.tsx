@@ -38,7 +38,7 @@ export function FadeIn({
       ref={ref}
       className={className}
       initial={{ opacity: 0, y: offset.y, x: offset.x }}
-      animate={isInView ? { opacity: 1, y: 0, x: 0 } : {}}
+      animate={isInView ? { opacity: 1, y: 0, x: 0 } : { opacity: 0, y: offset.y, x: offset.x }}
       transition={{ duration: 0.5, delay, ease: easeOut }}
     >
       {children}

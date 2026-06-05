@@ -51,7 +51,7 @@ export function Testimonials() {
       <div className="max-w-[1280px] mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5 }}
           className="mb-14"
           ref={ref}

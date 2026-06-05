@@ -26,7 +26,7 @@ function BarChart() {
           key={i}
           className="flex-1 rounded-t-sm bg-teal/80"
           initial={{ scaleY: 0, originY: 1 }}
-          animate={isInView ? { scaleY: 1 } : {}}
+          animate={isInView ? { scaleY: 1 } : { scaleY: 0 }}
           transition={{ duration: 0.5, delay: bar.delay, ease: [0.21, 0.47, 0.32, 0.98] }}
           style={{ height: `${bar.height}%`, transformOrigin: "bottom" }}
         />
@@ -44,7 +44,7 @@ export function CaseStudyTeaser() {
       <div ref={ref} className="max-w-[1280px] mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
           className="bg-[#0D1B2A] rounded-3xl overflow-hidden"
         >

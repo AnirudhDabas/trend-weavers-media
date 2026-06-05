@@ -13,7 +13,7 @@ export function CTABanner() {
       <div className="max-w-[1280px] mx-auto px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
           transition={{ duration: 0.6 }}
           className="flex flex-col items-center gap-5"
         >

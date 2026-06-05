@@ -31,7 +31,7 @@ export function HowWeWork() {
       <div className="max-w-[1280px] mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5 }}
           className="mb-16"
         >
@@ -50,7 +50,7 @@ export function HowWeWork() {
             <motion.div
               className="h-full bg-teal origin-left"
               initial={{ scaleX: 0 }}
-              animate={isInView ? { scaleX: 1 } : {}}
+              animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
               transition={{ duration: 1.2, delay: 0.5, ease: "easeInOut" }}
             />
           </div>
@@ -60,7 +60,7 @@ export function HowWeWork() {
               <motion.div
                 key={step.number}
                 initial={{ opacity: 0, y: 24 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
                 transition={{ duration: 0.5, delay: 0.2 + i * 0.15 }}
                 className="relative flex flex-col gap-5"
               >
