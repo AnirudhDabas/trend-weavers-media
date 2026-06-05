@@ -30,7 +30,7 @@ const services = [
       "Monthly analytics report",
     ],
     icon: (
-      <svg viewBox="0 0 64 64" fill="none" className="w-16 h-16" stroke="#00C4CC" strokeWidth="1.8">
+      <svg viewBox="0 0 64 64" fill="none" className="w-12 h-12 sm:w-16 sm:h-16" stroke="#00C4CC" strokeWidth="1.8">
         <rect x="6" y="6" width="22" height="22" rx="4" />
         <rect x="36" y="6" width="22" height="22" rx="4" />
         <rect x="6" y="36" width="22" height="22" rx="4" />
@@ -50,7 +50,7 @@ const services = [
       "Brand voice guide",
     ],
     icon: (
-      <svg viewBox="0 0 64 64" fill="none" className="w-16 h-16" stroke="#00C4CC" strokeWidth="1.8">
+      <svg viewBox="0 0 64 64" fill="none" className="w-12 h-12 sm:w-16 sm:h-16" stroke="#00C4CC" strokeWidth="1.8">
         <path d="M8 12h48M8 24h32M8 36h40M8 48h24" strokeLinecap="round" />
       </svg>
     ),
@@ -67,7 +67,7 @@ const services = [
       "Monthly rankings and traffic report",
     ],
     icon: (
-      <svg viewBox="0 0 64 64" fill="none" className="w-16 h-16" stroke="#00C4CC" strokeWidth="1.8">
+      <svg viewBox="0 0 64 64" fill="none" className="w-12 h-12 sm:w-16 sm:h-16" stroke="#00C4CC" strokeWidth="1.8">
         <circle cx="28" cy="28" r="18" />
         <path d="M42 42l14 14" strokeLinecap="round" />
       </svg>
@@ -85,7 +85,7 @@ const services = [
       "Weekly performance reports",
     ],
     icon: (
-      <svg viewBox="0 0 64 64" fill="none" className="w-16 h-16" stroke="#00C4CC" strokeWidth="1.8">
+      <svg viewBox="0 0 64 64" fill="none" className="w-12 h-12 sm:w-16 sm:h-16" stroke="#00C4CC" strokeWidth="1.8">
         <path d="M8 48V32l16-16 16 16V48" />
         <path d="M56 48V28l-16-12" />
         <path d="M8 48h48" strokeLinecap="round" />
@@ -104,7 +104,7 @@ const services = [
       "Competitor landscape analysis",
     ],
     icon: (
-      <svg viewBox="0 0 64 64" fill="none" className="w-16 h-16" stroke="#00C4CC" strokeWidth="1.8">
+      <svg viewBox="0 0 64 64" fill="none" className="w-12 h-12 sm:w-16 sm:h-16" stroke="#00C4CC" strokeWidth="1.8">
         <polygon points="32,6 40,24 60,24 44,36 50,56 32,44 14,56 20,36 4,24 24,24" />
       </svg>
     ),
@@ -121,7 +121,7 @@ const services = [
       "Quarterly strategy review",
     ],
     icon: (
-      <svg viewBox="0 0 64 64" fill="none" className="w-16 h-16" stroke="#00C4CC" strokeWidth="1.8">
+      <svg viewBox="0 0 64 64" fill="none" className="w-12 h-12 sm:w-16 sm:h-16" stroke="#00C4CC" strokeWidth="1.8">
         <path d="M8 52V36l16-20 16 20v16" />
         <path d="M56 52V28l-16-12" />
         <path d="M8 52h48" strokeLinecap="round" />
@@ -168,7 +168,7 @@ export default function ServicesPage() {
                   style={{ direction: i % 2 !== 0 ? "rtl" : "ltr" }}
                 >
                   <div className="flex justify-center" style={{ direction: "ltr" }}>
-                    <div className="w-40 h-40 rounded-3xl bg-teal/10 flex items-center justify-center">
+                    <div className="w-28 h-28 sm:w-40 sm:h-40 rounded-2xl sm:rounded-3xl bg-teal/10 flex items-center justify-center">
                       {service.icon}
                     </div>
                   </div>

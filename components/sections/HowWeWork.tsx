@@ -76,7 +76,7 @@ export function HowWeWork() {
 
                 {/* Ghost number */}
                 <div
-                  className="absolute -top-4 -left-3 text-[100px] font-black text-teal/5 leading-none select-none pointer-events-none"
+                  className="absolute -top-4 -left-3 text-[70px] sm:text-[100px] font-black text-teal/5 leading-none select-none pointer-events-none"
                   style={{ fontFamily: "var(--font-jakarta)" }}
                 >
                   {step.number}

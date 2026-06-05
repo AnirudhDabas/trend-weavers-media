@@ -33,8 +33,8 @@ export function LoadingScreen() {
             animate={{ opacity: 1 }}
             transition={{ duration: 2 }}
             style={{
-              width: 700,
-              height: 700,
+              width: "min(700px, 90vw)",
+              height: "min(700px, 90vw)",
               borderRadius: "50%",
               background:
                 "radial-gradient(ellipse at center, rgba(0,196,204,0.07) 0%, rgba(255,209,102,0.04) 35%, transparent 70%)",
@@ -67,7 +67,8 @@ export function LoadingScreen() {
                 width={200}
                 height={200}
                 alt="Trend Weavers Media"
-                className="rounded-[36px]"
+                className="rounded-[clamp(20px,5vw,36px)]"
+                style={{ width: "clamp(130px, 35vw, 200px)", height: "clamp(130px, 35vw, 200px)" }}
                 priority
               />
             </motion.div>

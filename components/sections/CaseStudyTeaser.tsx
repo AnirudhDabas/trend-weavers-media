@@ -50,7 +50,7 @@ export function CaseStudyTeaser() {
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
             {/* Left — content */}
-            <div className="p-10 lg:p-14 flex flex-col gap-6 justify-center">
+            <div className="p-6 sm:p-10 lg:p-14 flex flex-col gap-6 justify-center">
               <p className="text-xs font-semibold tracking-[0.2em] uppercase text-teal">
                 Featured Result
               </p>
@@ -71,7 +71,7 @@ export function CaseStudyTeaser() {
             </div>
 
             {/* Right — chart */}
-            <div className="flex items-end justify-center p-10 lg:p-14 border-t lg:border-t-0 lg:border-l border-white/10">
+            <div className="flex items-end justify-center p-6 sm:p-10 lg:p-14 border-t lg:border-t-0 lg:border-l border-white/10">
               <div className="w-full max-w-[280px]">
                 <BarChart />
                 <div className="flex justify-between mt-3 px-4">

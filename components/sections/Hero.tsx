@@ -230,7 +230,7 @@ export function Hero() {
                 initial={{ y: 30, opacity: 0 }}
                 animate={appReady ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
                 transition={{ duration: 0.6, delay: 0.1, ease: lineEase }}
-                className="text-[56px] lg:text-[68px] xl:text-[76px] font-light leading-[1.05] tracking-tight text-foreground"
+                className="text-[40px] sm:text-[52px] lg:text-[68px] xl:text-[76px] font-light leading-[1.05] tracking-tight text-foreground"
                 style={{ fontFamily: "var(--font-jakarta)" }}
               >
                 We don&apos;t chase
@@ -239,7 +239,7 @@ export function Hero() {
                 initial={{ y: 30, opacity: 0 }}
                 animate={appReady ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
                 transition={{ duration: 0.6, delay: 0.25, ease: lineEase }}
-                className="text-[56px] lg:text-[68px] xl:text-[76px] font-extrabold leading-[1.05] tracking-tight"
+                className="text-[40px] sm:text-[52px] lg:text-[68px] xl:text-[76px] font-extrabold leading-[1.05] tracking-tight"
                 style={{
                   fontFamily: "var(--font-jakarta)",
                   background: "linear-gradient(90deg, #00C4CC 0%, #00D4DC 100%)",
@@ -254,7 +254,7 @@ export function Hero() {
                 initial={{ y: 30, opacity: 0 }}
                 animate={appReady ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
                 transition={{ duration: 0.6, delay: 0.4, ease: lineEase }}
-                className="text-[56px] lg:text-[68px] xl:text-[76px] font-light leading-[1.05] tracking-tight text-foreground"
+                className="text-[40px] sm:text-[52px] lg:text-[68px] xl:text-[76px] font-light leading-[1.05] tracking-tight text-foreground"
                 style={{ fontFamily: "var(--font-jakarta)" }}
               >
                 We build them.

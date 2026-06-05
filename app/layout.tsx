@@ -52,7 +52,7 @@ export default function RootLayout({
       className={`${jakarta.variable} ${inter.variable} ${jetbrains.variable}`}
       suppressHydrationWarning
     >
-      <body className="min-h-screen flex flex-col antialiased">
+      <body className="min-h-screen flex flex-col antialiased overflow-x-hidden">
         <Providers>
           <LoadingScreen />
           <Navbar />
