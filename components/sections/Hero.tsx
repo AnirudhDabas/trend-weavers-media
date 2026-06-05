@@ -267,7 +267,7 @@ export function Hero() {
               transition={{ duration: 0.5, delay: 0.6 }}
               className="text-base text-muted-foreground leading-[1.7] max-w-[500px]"
             >
-              Trend Weavers Media is a data-driven digital marketing agency helping brands across India grow their presence, leads, and revenue online.
+              Trend Weavers Media is a data-driven digital marketing agency helping brands grow their presence, leads, and client revenue online.
             </motion.p>
 
             <motion.div

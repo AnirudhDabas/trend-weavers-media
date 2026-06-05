@@ -52,7 +52,7 @@ export function StatsBar() {
     <section className="bg-[#0D1B2A] py-16 lg:py-20">
       <div className="max-w-[1280px] mx-auto px-6">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10 lg:gap-6">
-          <AnimatedStat prefix="$" value={85} suffix="K+" label="Revenue Generated" accent />
+          <AnimatedStat prefix="$" value={85} suffix="K+" label="Client Revenue Driven" accent />
           <AnimatedStat value={15} suffix="+" label="Clients Served" />
           <AnimatedStat value={40} suffix="%" label="Avg. Outreach Growth" />
           <AnimatedStat value={10} suffix="" label="Team Members" />

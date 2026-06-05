@@ -21,7 +21,7 @@ const milestones = [
   { year: "2023", label: "Founded" },
   { year: "2023", label: "First 5 clients" },
   { year: "2024", label: "Team grew to 10" },
-  { year: "2024", label: "$85K+ in revenue" },
+  { year: "2024", label: "$85K+ client revenue" },
   { year: "2025", label: "Expanding to paid media" },
 ];
 
@@ -72,7 +72,7 @@ export default function AboutPage() {
               Built by students. Trusted by brands.
             </h1>
             <p className="text-base text-muted-foreground leading-[1.7] max-w-xl">
-              We started Trend Weavers Media with a simple belief: good marketing should be measurable. We built it from zero, figured out what actually works, and turned that into a system that delivers results for brands across India.
+              We started Trend Weavers Media with a simple belief: good marketing should be measurable. We built it from zero, figured out what actually works, and turned that into a system that delivers results for brands worldwide.
             </p>
           </FadeIn>
         </div>
@@ -90,7 +90,7 @@ export default function AboutPage() {
                 We built the agency from the ground up. No funding, no fancy office, no playbook. Just a team that cared about results and worked until we got them.
               </p>
               <p>
-                Today, TWM is a team of 10 content creators, strategists, and analysts who have delivered real, measurable results across social media, SEO, paid advertising, and brand strategy for brands across India.
+                Today, TWM is a team of 10 content creators, strategists, and analysts who have delivered real, measurable results across social media, SEO, paid advertising, and brand strategy for brands worldwide.
               </p>
               <p>
                 We&apos;re still driven by the same thing that got us started: the belief that marketing should move the needle, not just fill a calendar.

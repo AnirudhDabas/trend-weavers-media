@@ -8,13 +8,13 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { CTABanner } from "@/components/sections/CTABanner";
 
 export const metadata: Metadata = {
-  title: "Trend Weavers Media | Digital Marketing Agency India",
+  title: "Trend Weavers Media | Digital Marketing Agency",
   description:
-    "Data-driven digital marketing agency helping brands across India grow their presence, leads, and revenue online.",
+    "Data-driven digital marketing agency helping brands grow their presence, leads, and client revenue online.",
   openGraph: {
-    title: "Trend Weavers Media | Digital Marketing Agency India",
+    title: "Trend Weavers Media | Digital Marketing Agency",
     description:
-      "Data-driven digital marketing agency helping brands across India grow online.",
+      "Data-driven digital marketing agency helping brands grow online.",
     url: "https://trendweavers.in",
     siteName: "Trend Weavers Media",
     type: "website",
