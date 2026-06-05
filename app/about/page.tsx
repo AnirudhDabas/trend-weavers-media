@@ -42,18 +42,18 @@ const values = [
 
 const founders = [
   {
-    initials: "AD",
-    name: "Anirudh Dabas",
-    title: "Co-Founder",
-    bio: "Anirudh sits at the intersection of engineering, growth, and analytics. He builds the tools and systems that help Trend Weavers move faster, measure better, and deliver real business outcomes.",
-    linkedin: "https://linkedin.com/in/anirudh-dabas-ab3998229",
-  },
-  {
     initials: "NN",
     name: "Naman Nakra",
     title: "Co-Founder",
     bio: "Naman shapes the strategy behind Trend Weavers. He connects market insight, brand positioning, and performance thinking to help clients turn strong creative into stronger business results.",
     linkedin: "https://linkedin.com/in/namanvnakra",
+  },
+  {
+    initials: "AD",
+    name: "Anirudh Dabas",
+    title: "Co-Founder",
+    bio: "Anirudh sits at the intersection of engineering, growth, and analytics. He builds the tools and systems that help Trend Weavers move faster, measure better, and deliver real business outcomes.",
+    linkedin: "https://linkedin.com/in/anirudh-dabas-ab3998229",
   },
 ];
 
